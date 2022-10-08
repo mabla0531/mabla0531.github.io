@@ -5,6 +5,7 @@
         <title>Matthew Bland</title>
 
         <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
         <style type="text/css">
             html, body {
@@ -15,10 +16,9 @@
             }
 
             #header {
-                position: fixed;
+                position: absolute;
                 width: 100%;
                 background-color: white;
-                padding: 8px;
                 box-shadow: 0 0 10px;
             }
 
@@ -60,12 +60,36 @@
                 color:#036ffc;
             }
 
-            #home {
+            #content {
                 width: 100%;
                 height: 100%;
+                
                 display: flex;
-                justify-content: center;
                 align-items: center;
+                justify-content: center;
+            }
+
+            .tabcontent {
+                text-align: center;
+                font-family: 'Lato', sans-serif;
+                font-size: 18pt;
+                font-weight: 600;
+            }
+
+            #intro {
+                font-family: 'Lato', sans-serif;
+                font-size: 28pt;
+                font-weight: 600;
+                display: inline-block;
+            }
+
+            #name {
+                color: #036ffc;
+                display: inline-block;
+            }
+
+            #career {
+                
             }
         </style>
 
@@ -103,19 +127,25 @@
             </div>
         </div>
 
-        <div id="home" class="tabcontent">
+        <div id="content">
+            <div id="home" class="tabcontent">
+                <div id="intro">HI, I'M <div id="name">MATTHEW BLAND</div></div>
+                <p/>
+                <div id="career">Software Developer</div>
+            </div>
+            <div id="about" class="tabcontent">
+                about
+            </div>
+            <div id="portfolio" class="tabcontent">
+                portfolio
+            </div>
+            <div id="contact" class="tabcontent">
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="matthew-bland-894b47185" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/matthew-bland-894b47185?trk=profile-badge"></a></div>
 
-        </div>
-        <div id="about" class="tabcontent">
 
+            </div>
         </div>
-        <div id="portfolio" class="tabcontent">
 
-        </div>
-        <div id="contact" class="tabcontent">
-            
-        </div>
-    
         <script>
             document.getElementById("defaultButton").click();
         </script>
