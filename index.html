@@ -53,11 +53,11 @@
             }
 
             #tabs button:hover {
-                background-color: #ddd;
+                color: #036ffc;
             }
 
             #tabs button.active {
-                background-color: #ccc;
+                color:#036ffc;
             }
 
             #home {
@@ -69,8 +69,8 @@
             }
         </style>
 
-        <script type="text/javascript">
-            function openTab(event, tabName) {
+        <script>
+            function switchTab(event, tabName) {
 
                 var i, tabcontent, tablinks;
 
@@ -79,12 +79,14 @@
                     tabcontent[i].style.display = "none";
                 }
 
-                tablinks = document.getElementsByClassName("tablinks");
+                tablinks = document.getElementsByClassName("tablink");
                 for (i = 0; i < tablinks.length; i++) {
                     tablinks[i].className = tablinks[i].className.replace(" active", "");
                 }
+                
+                console.debug(tabName);
 
-                document.getElementById(tabName).style.display = block;
+                document.getElementById(tabName).style.display = "block";
                 event.currentTarget.className += " active";
             }
         </script>
@@ -94,15 +96,28 @@
         <div id="header">
             <div id="initials">MB</div>
             <div id="tabs">
-                <button class="tablink" onclick="switchTab(event, 'home')">Home</button>
+                <button class="tablink" onclick="switchTab(event, 'home')" id="defaultButton">Home</button>
                 <button class="tablink" onclick="switchTab(event, 'about')">About</button>
                 <button class="tablink" onclick="switchTab(event, 'portfolio')">Portfolio</button>
                 <button class="tablink" onclick="switchTab(event, 'contact')">Contact Me</button>
             </div>
         </div>
 
-        <canvas id="display">
+        <div id="home" class="tabcontent">
+
+        </div>
+        <div id="about" class="tabcontent">
+
+        </div>
+        <div id="portfolio" class="tabcontent">
+
+        </div>
+        <div id="contact" class="tabcontent">
             
-        </canvas>
+        </div>
+    
+        <script>
+            document.getElementById("defaultButton").click();
+        </script>
     </body>
 </html>
