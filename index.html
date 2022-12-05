@@ -73,6 +73,10 @@
                 font-family: 'Lato', sans-serif;
                 font-size: 18pt;
                 font-weight: 600;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0 auto;
             }
 
             #intro {
@@ -95,11 +99,38 @@
                 display: inline-block;
                 text-align: center;
                 font-size: 14pt;
+                padding: 4px;
+                transition: 0.5s;
+            }
+
+            .badge:hover {
+                transform: scale(1.1);
+                transition: 0.5s;
             }
 
             a {
-                color: #000000; text-decoration: none
+                color: #000000;
+                text-decoration: none;
             }
+
+            .portfolio {
+                display: inline-block;
+                padding: 32px;
+                width: 300px;
+                height: 300px;
+                transition: 0.5s;
+            }
+
+            .portfolio:hover {
+                transform: scale(1.1);
+                transition: 0.5s;
+            }
+
+            #about {
+                text-align: left;
+                margin: 64px;
+            }
+
         </style>
 
         <script>
@@ -143,10 +174,15 @@
                 <div id="career">Software Developer</div>
             </div>
             <div id="about" class="tabcontent">
-                about
+                Hi, I'm Matthew. I live in the Dallas-Fort Worth area. I graduated with a BS in Computer Science from Southern Arkansas University in 2023. My main foci are software engineering and systems design. <br><br>I also play trombone, all genres. 
             </div>
             <div id="portfolio" class="tabcontent">
-                portfolio
+                <h2>Significant Projects:</h2>
+                <div class="portfolio"><img src="assets/carbon.png" style="width: 240px; height: 240px; border-radius: 10px;"/><br>2d Game Engine</div>
+                <div class="portfolio"><img src="assets/dave.png" style="width: 240px; height: 240px; border-radius: 10px;"/><br>Virtual Reality Game</div>
+                <div class="portfolio"><img src="assets/SP2022.png" style="width: 240px; height: 240px; border-radius: 10px;"/><br>AI Attendance Platform</div>
+                <br>And this website!<br>
+                <br>Bonus: A (comedic) rework of python's math.ceil() function<br><img src="assets/funny.png" style="width: 800px; height: 120px; border-radius: 10px;"/>
             </div>
             <div id="contact" class="tabcontent">
 
